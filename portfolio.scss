@@ -562,7 +562,12 @@ strong {
     }
 
     & svg {
+        fill: none;
         margin-right: 0.75em;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
     }
 }
 
@@ -783,6 +788,16 @@ strong {
     &.dot--active {
         opacity: 1;
         width: 2.5rem;
+    }
+}
+
+// Hero buttons
+.hero__buttons {
+    @include align-items(center);
+    @include display-flex();
+
+    & > *:not(:last-child) {
+        margin-right: 1rem;
     }
 }
 

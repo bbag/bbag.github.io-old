@@ -357,7 +357,12 @@ strong {
 }
 
 .button svg {
+  fill: none;
   margin-right: 0.75em;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .button-secondary {
@@ -591,6 +596,23 @@ strong {
 .dot.dot--active {
   opacity: 1;
   width: 2.5rem;
+}
+
+.hero__buttons {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.hero__buttons > *:not(:last-child) {
+  margin-right: 1rem;
 }
 
 /*---------------------------------------------------------*/
