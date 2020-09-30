@@ -540,7 +540,7 @@ strong {
     @include align-items(center);
     background: var(--color-primary);
     border: 0.125rem solid var(--color-primary);
-    border-radius: 0.25rem;
+    border-radius: 0.375rem;
     color: #FFF;
     cursor: pointer;
     display: inline-block;
@@ -568,6 +568,7 @@ strong {
         stroke-width: 2;
         stroke-linecap: round;
         stroke-linejoin: round;
+        width: 1.5em;
     }
 }
 
@@ -678,16 +679,27 @@ strong {
 // CSS Terminal
 .terminal {
     background: #282C34;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     color: #ABB2BF;
     font-family: $font-code;
     font-size: 0.875em;
     line-height: 1.4;
     padding: 1.5rem;
+    position: relative;
     margin: 3rem 0;
     max-width: 100%;
     overflow: hidden;
     white-space: pre-wrap;
+
+    &::after {
+        color: #FFF;
+        content: "CSS";
+        font-size: 0.75em;
+        opacity: 0.4;
+        position: absolute;
+        right: 0.75em;
+        top: 0.75em;
+    }
 
     &--line {
         padding-left: 2.5em;
@@ -711,11 +723,12 @@ strong {
 .hero__thumbnails {
     background: #000;
     border: solid 0.125rem #FFF;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     box-shadow: 0 0.5rem 1.75rem var(--color-shadow);
     max-width: 28rem;
     overflow: hidden;
     position: relative;
+    transition: box-shadow 400ms ease;
 }
 
 .thumbnail {
