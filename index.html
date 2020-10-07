@@ -11,13 +11,14 @@
     </head>
     <body>
         <section class="hero">
+            <canvas id="heroBackground"></canvas>
             <div class="hero-content">
                 <div class="hero--left">
                     <h1 class="hero__name">Billy Baggerman.</h1>
-                    <h2 class="hero__title">&mdash; UX/UI designer, front-end developer, BJJ geek.</h2>
+                    <h2 class="hero__title"><span>&mdash; UX/UI designer, front-end developer, BJJ geek.</span></h2>
                     <p class="hero__intro">I combine <strong class="hero__intro__highlight">15+ years</strong> of web design experience with a love for front-end development to create eye-catching, pleasant, and functional user interfaces.</p>
                     <div class="terminal"><span class="terminal--selector">#BillyBaggerman</span> {
-<div class="terminal--line"><span class="terminal--property">location</span>: <span class="terminal--value">Atlanta GA</span>;</div><div class="terminal--line"><span class="terminal--property">role</span>: <span class="terminal--value">UX/UI Engineer + Designer + Front-end Developer</span>;</div><div class="terminal--line"><span class="terminal--property">design-skills</span>: <span class="terminal--value">Adobe XD</span>, <span class="terminal--value">Illustrator</span>, <span class="terminal--value">Photoshop</span>, <span class="terminal--value">InVision</span>, <span class="terminal--value">Figma</span>;</div><div class="terminal--line"><span class="terminal--property">dev-skills</span>: <span class="terminal--value">HTML</span>, <span class="terminal--value">CSS</span>, <span class="terminal--value">SASS</span>, <span class="terminal--value">JavaScript</span>, <span class="terminal--value">Vue.js</span>;</div><div class="terminal--line"><span class="terminal--property">learning</span>: <span class="terminal--value">React</span>, <span class="terminal--value">Svelte</span>, <span class="terminal--value">three.js</span>, <span class="terminal--value">BabylonJS</span>;</div>}</div>
+<div class="terminal--line"><span class="terminal--property">location</span>: <span class="terminal--value">Atlanta GA</span>;</div><div class="terminal--line"><span class="terminal--property">role</span>: <span class="terminal--value">UX/UI Engineer + Designer + Front-end Developer</span>;</div><div class="terminal--line"><span class="terminal--property">design-skills</span>: <span class="terminal--value">Adobe XD</span>, <span class="terminal--value">Illustrator</span>, <span class="terminal--value">Photoshop</span>, <span class="terminal--value">InVision</span>, <span class="terminal--value">Figma</span>;</div><div class="terminal--line"><span class="terminal--property">dev-skills</span>: <span class="terminal--value">HTML</span>, <span class="terminal--value">CSS</span>, <span class="terminal--value">SASS</span>, <span class="terminal--value">JavaScript</span>, <span class="terminal--value">Vue.js</span>, <span class="terminal--value">WordPress</span>, <span class="terminal--value">PHP</span>;</div><div class="terminal--line"><span class="terminal--property">learning</span>: <span class="terminal--value">React</span>, <span class="terminal--value">Svelte</span>, <span class="terminal--value">three.js</span>, <span class="terminal--value">BabylonJS</span>;</div>}</div>
                     <div class="hero__buttons">
                         <a class="button" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -50,15 +51,31 @@
                 <div class="hero--right">
                     <div class="hero__thumbnails">
                         <img class="thumbnail--sizer" src="img/thumbnail-titanium.png" alt="">
-                        <img class="thumbnail thumbnail--active" src="img/thumbnail-titanium.png" data-color="#CA2127" alt="Subdomain website for Axway Titanium">
-                        <img class="thumbnail thumbnail--right" src="img/thumbnail-digitalelement.png" data-color="#F4941C" alt="Subdomain website for Axway Titanium">
-                        <img class="thumbnail thumbnail--right" src="img/thumbnail-atlprime.png" data-color="#3458B2" alt="Atlanta Prime Physicians website">
-                        <img class="thumbnail thumbnail--right" src="img/thumbnail-bjjtracker.png" data-color="#282C34" alt="Subdomain website for Axway Titanium">
-                        <img class="thumbnail thumbnail--right" src="img/thumbnail-simplekitchen.png" data-color="#5BAB38" alt="Subdomain website for Axway Titanium">
+                        <img class="thumbnail thumbnail--active" src="img/thumbnail-titanium.png" data-color="#CA2127" data-target="work-titanium" alt="Subdomain website for Axway Titanium">
+                        <img class="thumbnail thumbnail--right" src="img/thumbnail-digitalelement.png" data-color="#F4941C" data-target="work-digitalelement" alt="Interactive 3D globe for Digital Element">
+                        <img class="thumbnail thumbnail--right" src="img/thumbnail-atlprime.png" data-color="#3458B2" data-target="work-atlprime" alt="Atlanta Prime Physicians website">
+                        <img class="thumbnail thumbnail--right" src="img/thumbnail-bjjtracker.png" data-color="#282C34" data-target="work-bjjtracker" alt="Personal BJJ class analytics dashboard">
+                        <img class="thumbnail thumbnail--right" src="img/thumbnail-simplekitchen.png" data-color="#5BAB38" data-target="work-simplekitchen" alt="UX/UI design for recipe landing page">
+                        <div class="thumbnail-info-container">
+                            <span class="thumbnail-info">
+                                <h3>Project:</h3>
+                                <span class="thumbnail-info-title">
+                                    Axway Titanium developer site
+                                </span>
+                            </span>
+                            <span>
+                                <button class="button button-small" id="checkItOut">
+                                    Check It Out
+                                </button>
+                            </span>
+                        </div>
+                        <div class="thumbnail-reveal-1">
+                            <span>Work samples.</span>
+                        </div>
                     </div>
                     <div class="thumbnail-controls">
                         <button class="button step-button disabled" id="buttonPrev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18">
                                 <line x1="20" y1="10" x2="4" y2="10" />
                                 <polyline points="10 16 4 10 10 4" />
                             </svg>
@@ -71,7 +88,7 @@
                             <span class="dot"></span>
                         </div>
                         <button class="button step-button" id="buttonNext">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18">
                                 <line x1="4" y1="10" x2="20" y2="10" />
                                 <polyline points="14 4 20 10 14 16" />
                             </svg>
@@ -79,7 +96,173 @@
                     </div>
                 </div>
             </div>
+            <svg class="hero-bottom-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80">
+                <path fill="#FFF" d="M0 80C120 80 120 0 240 0s120 80 240 80H0z" />
+                <rect x="230" y="26" width="20" height="32" rx="10" />
+                <line x1="240" y1="32" x2="240" y2="36" />
+            </svg>
         </section>
+        <section class="work" id="section-work">
+            <div class="work-intro">
+                <h2>My Work.</h2>
+                <p>I've worked on a lot of fun stuff for companies, clients, and myself:</p>
+                <hr />
+            </div>
+            <div class="work-content">
+                <div class="work-item" id="work-titanium">
+                    <img class="work-thumbnail" src="img/thumbnail-titanium.png" alt="Subdomain website for Axway Titanium">
+                    <div class="work-info">
+                        <h3 class="work-info-title">Axway Titanium microsite.</h3>
+                        <p>Bacon ipsum dolor amet ullamco exercitation beef, dolore pork reprehenderit shank corned beef sausage turducken sint biltong anim. Pig ad pastrami exercitation boudin officia turkey tail landjaeger.</p>
+                        <div class="work-icons">
+                            <img src="img/icon-html.svg" alt="HTML5">
+                            <img src="img/icon-css.svg" alt="CSS3">
+                            <img src="img/icon-sass.svg" alt="SASS">
+                            <img src="img/icon-js.svg" alt="JavaScript">
+                            <img src="img/icon-ps.svg" alt="Photoshop">
+                            <img src="img/icon-illustrator.svg" alt="Illustrator">
+                        </div>
+                        <div class="work-buttons">
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-digitalelement">
+                    <img class="work-thumbnail" src="img/thumbnail-digitalelement.png" alt="Interactive 3D globe for Digital Element">
+                    <div class="work-info">
+                        <h3 class="work-info-title">3D interactive visualization for Digital Element.</h3>
+                        <p>Bacon ipsum dolor amet leberkas burgdoggen pastrami non. Ut sirloin tri-tip incididunt salami duis cupidatat, kielbasa ham hock minim. Elit nulla rump sunt alcatra consectetur. Short ribs fatback ad tongue voluptate pancetta t-bone ipsum pariatur hamburger cow in.</p>
+                        <p>Minim tongue qui jowl, kevin mollit short loin consequat tempor magna.</p>
+                        <div class="work-icons">
+                            <img src="img/icon-html.svg" alt="HTML5">
+                            <img src="img/icon-css.svg" alt="CSS3">
+                            <img src="img/icon-js.svg" alt="JavaScript">
+                        </div>
+                        <div class="work-buttons">
+                            <a href="https://www.digitalelement.com/geolocation/" class="button button-small" style="background: #F4941C; border-color: #F4941C;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="#" class="button button-small" style="background: #F4941C; border-color: #F4941C;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small" style="background: #F4941C; border-color: #F4941C;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-atlprime">
+                    <img class="work-thumbnail" src="img/thumbnail-atlprime.png" alt="Interactive 3D globe for Digital Element">
+                    <div class="work-info">
+                        <h3 class="work-info-title">Atlanta Prime Physicians website.</h3>
+                        <p>Spicy jalape&ntilde;o bacon ipsum dolor amet venison jowl incididunt shank nostrud pork. Bresaola biltong boudin shoulder alcatra in prosciutto corned beef hamburger.</p>
+                        <div class="work-icons">
+                            <img src="img/icon-html.svg" alt="HTML5">
+                            <img src="img/icon-css.svg" alt="CSS3">
+                            <img src="img/icon-bootstrap.svg" alt="Bootstrap">
+                            <img src="img/icon-sass.svg" alt="SASS">
+                            <img src="img/icon-js.svg" alt="JavaScript">
+                            <img src="img/icon-php.svg" alt="PHP">
+                            <img src="img/icon-illustrator.svg" alt="Illustrator">
+                        </div>
+                        <div class="work-buttons">
+                            <a href="#" class="button button-small" style="background: #3458B2; border-color: #3458B2;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="#" class="button button-small" style="background: #3458B2; border-color: #3458B2;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-bjjtracker">
+                    <img class="work-thumbnail" src="img/thumbnail-bjjtracker.png" alt="Interactive 3D globe for Digital Element">
+                    <div class="work-info">
+                        <h3 class="work-info-title">Personal "BJJ goal tracker" dashboard app.</h3>
+                        <p>Bacon ipsum dolor amet magna prosciutto pork chop cupidatat turkey bacon. Labore meatball ex, ut jowl short loin pig pork loin incididunt.</p>
+                        <p>Ham ball tip pariatur, beef tenderloin lorem minim jerky pancetta cupim corned beef occaecat voluptate sausage aliqua. Shoulder bresaola kielbasa, nostrud rump tri-tip est minim.</p>
+                        <div class="work-icons">
+                            <img src="img/icon-html.svg" alt="HTML5">
+                            <img src="img/icon-css.svg" alt="CSS3">
+                            <img src="img/icon-sass.svg" alt="SASS">
+                            <img src="img/icon-js.svg" alt="JavaScript">
+                            <img src="img/icon-vue.svg" alt="Vue.js">
+                        </div>
+                        <div class="work-buttons">
+                            <a href="#" class="button button-small" style="background: #282C34; border-color: #282C34;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small" style="background: #282C34; border-color: #282C34;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-simplekitchen">
+                    <img class="work-thumbnail" src="img/thumbnail-simplekitchen.png" alt="Interactive 3D globe for Digital Element">
+                    <div class="work-info">
+                        <h3 class="work-info-title">UX/UI design concept for recipe website.</h3>
+                        <p>Bacon ipsum dolor amet beef ribs esse labore filet mignon. Velit pork chop ut cupim porchetta short ribs, nostrud dolor ut tempor picanha salami jowl fugiat eu. Qui sed rump, ut bacon shoulder picanha turducken deserunt tempor. Ad biltong id, chicken officia pork belly ullamco quis fatback ut tail cupidatat deserunt.</p>
+                        <div class="work-icons">
+                            <img src="img/icon-ps.svg" alt="Photoshop">
+                            <img src="img/icon-illustrator.svg" alt="Illustrator">
+                        </div>
+                        <div class="work-buttons">
+                            <a href="#" class="button button-small" style="background: #5BAB38; border-color: #5BAB38;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <footer>
+            <h2>Contact Me</h2>
+            <p>Email: bill.baggerman@gmail.com</p>
+        </footer> -->
         <script type="text/javascript" src="portfolio.js"></script>
     </body>
 </html>
