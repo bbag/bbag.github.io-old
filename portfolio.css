@@ -875,6 +875,13 @@ section:not(.hero) {
   background: #FFF;
 }
 
+.avatar {
+  border-radius: 100vh;
+  display: block;
+  margin: 2rem auto;
+  max-width: 14rem;
+}
+
 .work {
   background: var(--color-background);
 }
