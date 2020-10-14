@@ -128,12 +128,6 @@ function convertHexToHSL(hexInput) {
             "s2": s * 0.9,
             "l2": l * 0.9
         };
-
-        // return {
-        //     "r": r,
-        //     "g": g,
-        //     "b": b
-        // };
     }
 
     else {
@@ -235,23 +229,44 @@ window.onload = function () {
 }
 
 /*---------------------------------------------------------*/
+/*  Work modal pop-up                                      */
+/*---------------------------------------------------------*/
+
+var modal = document.querySelector(".work-modal"),
+    workItems = document.querySelectorAll(".work-item");
+
+modal.addEventListener("click", function() {
+    document.body.classList.toggle("modal-active");
+});
+
+workItems.forEach(function(item, index) {
+    item.addEventListener("click", function () {
+        document.body.classList.toggle("modal-active");
+    });
+});
+
+
+/*---------------------------------------------------------*/
 /*  Smooth scroll to work samples                          */
 /*---------------------------------------------------------*/
 
 var checkItOut = document.getElementById("checkItOut"),
-    scrollIcon = document.querySelector(".hero-bottom-divider rect");
+    // scrollIcon = document.querySelector(".hero-bottom-divider rect"),
+    scrollButtons = document.querySelectorAll("[data-scroll]");
 
 // Click listener for the "check it out" button in the hero section
 checkItOut.addEventListener("click", function() {
     let scrollTarget = document.querySelector(".thumbnail--active").getAttribute("data-target");
-    scrollToSection(scrollTarget);
+    scrollToSection(scrollTarget, true);
 });
 
-// Click listener for the mouse icon in the hero divider to scroll the to next section
-scrollIcon.addEventListener("click", function () {
-    console.log("cool");
-    scrollToSection("section-work");
-});
+// Click listener for all scroll buttons
+for (let i = 0; i < scrollButtons.length; i++) {
+    let scrollTarget = scrollButtons[i].getAttribute("data-scroll");
+    scrollButtons[i].addEventListener("click", function() {
+        scrollToSection(scrollTarget, false);
+    });
+};
 
 // Add R.A.F. shim, to be used for the animated scrolling effect below
 window.requestAnimFrame = (function () {
@@ -264,36 +279,48 @@ window.requestAnimFrame = (function () {
 })();
 
 // This scrolls the page's Y position to a section, based on that section's ID (e.g. <div id="sectionId"> & <button data-click-scroll="sectionId">)
-function scrollToSection(sectionId) {
-    let section = document.getElementById(sectionId);
+function scrollToSection(sectionId, addTopPadding) {
+
+    // Reset the scroll position, because it loves to screw it up after multiple scrollToSection() uses
+    window.scrollY = 0;
+
+    // if addTopPadding is true, then add some space to the extraOffset varaible
+    var extraOffset;
+    if (addTopPadding) {
+        extraOffset = 16;
+    } else {
+        extraOffset = 0;
+    }
+
+    var section = document.getElementById(sectionId);
         bodyRect = document.body.getBoundingClientRect(),
         sectionRect = section.getBoundingClientRect(),
-        extraOffset = 16,
+        
         sectionOffset = sectionRect.top - bodyRect.top - extraOffset,
         scrollY = window.scrollY || document.documentElement.scrollTop,
         scrollTargetY = sectionOffset,
         speed = 800, // lower = slower
         easing = 'easeInOutQuint',
-        currentTime = 0;
+        currentTime = 0,
 
-    // Min time 0.6 seconds, max time 1.2 seconds
-    var time = Math.max(0.6, Math.min(Math.abs(scrollY - scrollTargetY) / speed, 1.2));
-
-    // Easing equations from https://github.com/danro/easing-js/blob/master/easing.js
-    var easingEquations = {
-        easeOutSine: function (pos) {
-            return Math.sin(pos * (Math.PI / 2));
-        },
-        easeInOutSine: function (pos) {
-            return (-0.5 * (Math.cos(Math.PI * pos) - 1));
-        },
-        easeInOutQuint: function (pos) {
-            if ((pos /= 0.5) < 1) {
-                return 0.5 * Math.pow(pos, 5);
+        // Min time 0.6 seconds, max time 1.2 seconds
+        time = Math.max(0.6, Math.min(Math.abs(scrollY - scrollTargetY) / speed, 1.2)),
+    
+        // Easing equations from https://github.com/danro/easing-js/blob/master/easing.js
+        easingEquations = {
+            easeOutSine: function (pos) {
+                return Math.sin(pos * (Math.PI / 2));
+            },
+            easeInOutSine: function (pos) {
+                return (-0.5 * (Math.cos(Math.PI * pos) - 1));
+            },
+            easeInOutQuint: function (pos) {
+                if ((pos /= 0.5) < 1) {
+                    return 0.5 * Math.pow(pos, 5);
+                }
+                return 0.5 * (Math.pow((pos - 2), 5) + 2);
             }
-            return 0.5 * (Math.pow((pos - 2), 5) + 2);
-        }
-    };
+        };
 
     // Animation loop
     function tick() {
@@ -312,36 +339,41 @@ function scrollToSection(sectionId) {
     tick();
 }
 
-// buttonNext.addEventListener("click", function () {
-//     if (currentDot < screenshots.length - 1) {
+/*---------------------------------------------------------*/
+/*  Hero background dots                                   */
+/*---------------------------------------------------------*/
 
-//         deactivateDotAndThumbnail(currentDot);
+// let hero = document.querySelector(".hero"),
+//     heroDotsImg = document.querySelector(".hero-background"),
+//     heroDotsSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg"),
+//     heroDotsHeight = 192,
+//     heroDotsWidth = 256,
+//     dotRows = 24,
+//     dotColumns = 32,
+//     dotSize = 1;
 
-//         // Slide the screenshot off to the left
-//         screenshots[currentDot].classList.add("thumbnail--left");
+// heroDotsSvg.setAttribute("class", "hero-background");
+// heroDotsSvg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+// heroDotsSvg.setAttribute("viewBox", "0 0 " + heroDotsWidth + " " + heroDotsHeight);
 
-//         // Increment to the next preview screenshot
-//         currentDot++;
+// hero.insertBefore(heroDotsSvg, heroDotsImg);
+// heroDotsImg.remove();
 
-//         activateDotAndThumbnail(currentDot);
+// for (let i = 0; i < (dotRows + 2); i++) {
+//     for (let j = 0; j < (dotColumns + 2); j++) {
+//         let x = j * heroDotsWidth / (dotColumns + 1),
+//             y = i * heroDotsHeight / (dotRows + 1);
 
-//         setNewColorTheme(currentDot);
 
-//         // Slide the screenshot in from the right
-//         screenshots[currentDot].classList.remove("thumbnail--right");
+//         let dot = "<circle cx='" + x + "' cy='" + y + "' r='" + dotSize + "' style='transition-delay: 1s' />";
+//         // let dot = "<circle cx='" + x + "' cy='" + y + "' r='" + (j % 6 + 1) + "' />";
 
-//         setThumbnailInfo(currentDot);
-
-//         // Checks if the Previous/Next buttons are displayed properly for this new tab (and fixes them if not)
-//         checkButtonState();
+//         heroDotsSvg.insertAdjacentHTML("afterbegin", dot);
 //     }
-// })
+// }
 
-/*---------------------------------------------------------*/
-/*  Hero background canvas                                 */
-/*---------------------------------------------------------*/
 
-var canvas = document.getElementById("heroBackground"),
+var canvas = document.getElementById("heroCanvas"),
     ctx = canvas.getContext("2d");
 
 function setCanvasSize() {
@@ -353,33 +385,121 @@ function setCanvasSize() {
 setCanvasSize();
 
 // Resize the canvas when the window size changes
+// window.addEventListener("resize", function () {
+//     setCanvasSize();
+//     init();
+// });
+
+// Settings
+var dotRows = 24,
+    dotColumns = 32,
+// var dotRows = 2,
+//     dotColumns = 2,
+    dotSizeMin = 6,
+    dotSizeMax = 30,
+    dotFill = "rgba(0, 0, 0, 0.05)";
+
+// Resize the canvas when the window size changes
 window.addEventListener("resize", function () {
     // setCanvasSize();
     // drawCanvas();
 });
 
-// Draws an arrow line given the starting and ending coordinates
-function drawCanvas() {
-    ctx.beginPath();
-    ctx.moveTo(20, 20);
-    ctx.lineTo(400, 400);
-    ctx.lineCap = "round";
-    ctx.strokeStyle = "#FF0";
-    ctx.lineWidth = 4;
-    ctx.stroke();
+function Dot(x, y, radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+    this.scaleFactor = 1;
 
+    this.draw = function () {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = dotFill;
+        ctx.fill();
+    }
+
+    this.update = function () {
+        // To-do: Increment the radius here...
+        if (this.radius < dotSizeMax) {
+            this.radius += this.scaleFactor;
+        } else {
+            this.radius -= this.scaleFactor;
+        }
+
+        // ..then redraw the dot
+        this.draw();
+    }
+
+    this.draw();
+}
+
+function init() {
+
+    dotArray = [];
+
+    for (let i = 0; i < (dotRows + 2); i++) {
+        for (let j = 0; j < (dotColumns + 2); j++) {
+            let x = j * canvas.width / (dotColumns + 1),
+                y = i * canvas.height / (dotRows + 1),
+                radius = dotSizeMin;
+
+
+            dotArray.push(new Dot(x, y, radius));
+        }
+    }
+    console.log(dotArray);
 
 }
+
+function animate(time) {
+    requestAnimationFrame(animate);
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+    for (let i = 0; i < dotArray.length; i++) {
+        dotArray[i].update();
+    }
+}
+
+// init();
+// animate();
+
+
+
+
+
+
+
+
+// // Draws an arrow line given the starting and ending coordinates
+// function drawCanvas() {
+//     ctx.beginPath();
+//     ctx.moveTo(20, 20);
+//     ctx.lineTo(400, 400);
+//     ctx.lineCap = "round";
+//     ctx.strokeStyle = "#FF0";
+//     ctx.lineWidth = 4;
+//     ctx.stroke();
+
+//     for (let i = 0; i < (dotRows + 2); i++) {
+//         for (let j = 0; j < (dotColumns + 2); j++) {
+//             let x = j * heroDotsWidth / (dotColumns + 1),
+//                 y = i * heroDotsHeight / (dotRows + 1);
+
+
+            
+//         }
+//     }
+// }
 
 // drawCanvas();
 
 // function drawCanvas() {
-    
+
 
 //     // Clear the canvas
 //     ctx.clearRect(0, 0, width, height);
 
-    
+
 // }
 
 // function initCanvas() {
