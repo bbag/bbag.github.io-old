@@ -1,4 +1,170 @@
 /*---------------------------------------------------------*/
+/*  Work projects to feature                               */
+/*---------------------------------------------------------*/
+
+var myWork = {
+    titanium: {
+        id: "titanium",
+        title: "Axway Titanium website.",
+        screenshot: "img/thumbnail-titanium.png",
+        descriptionBrief: "Landing page for Axway's cross-platform mobile app development tool: Titanium.",
+        descriptionFull: [
+            "1st paragraph of the description for Titanium and stuff here.",
+            "2nd pragraph lol.",
+            "Third paragraph that's really long and goes on about all sorts of details regarding this project and henceforth like such as."
+        ],
+        links: {
+            "View": "#mainlink",
+            "Demo": "#demolink",
+            "GitHub": "#githublink"
+        },
+        techStack: [
+            "html", "css", "sass", "js", "vue", "illustrator"
+        ]
+    },
+    digitalelement: {
+        id: "digitalelement",
+        title: "3D geolocation data visualization.",
+        screenshot: "img/thumbnail-digitalelement.png",
+        descriptionBrief: "Interactive, 3D visualization of the types of data provided by Digital Element's NetAcuity IP geolocation solution.",
+        descriptionFull: [
+            "1st paragraph of the 3D globe description here."
+        ],
+        links: {
+            "View": "https://www.digitalelement.com/geolocation/",
+            "Demo": "https://bbag.github.io/3d-geolocation-globe/",
+            "GitHub": "https://github.com/bbag/3d-geolocation-globe"
+        },
+        techStack: [
+            "html", "css", "js"
+        ]
+    },
+    atlprime: {
+        id: "atlprime",
+        title: "Atlanta Prime Physicians website.",
+        screenshot: "img/thumbnail-atlprime.png",
+        descriptionBrief: "WordPress website developed for independent medical practice in Atlanta.",
+        descriptionFull: [
+            "1st paragraph of the ATL Prime Physicians website description here."
+        ],
+        links: {
+            "View": "https://www.atlantaprimephysicians.com"
+        },
+        techStack: [
+            "html", "css", "sass", "js", "vue", "illustrator"
+        ]
+    },
+    bjjtracker: {
+        id: "bjjtracker",
+        title: "Personal BJJ analytics dashboard.",
+        screenshot: "img/thumbnail-bjjtracker.png",
+        descriptionBrief: "Reactive local dashboard to track and record my personal goal of reaching 100 BJJ training sessions per year.",
+        descriptionFull: [
+            "1st paragraph of the description here."
+        ],
+        links: {
+            "Demo": "#",
+            "GitHub": "#"
+        },
+        techStack: [
+            "html", "css", "sass", "js", "vue", "illustrator"
+        ]
+    },
+    simplekitchen: {
+        id: "simplekitchen",
+        title: "SimpleKitchen UX/UI design exercise.",
+        screenshot: "img/thumbnail-simplekitchen.png",
+        descriptionBrief: "A UX/UI concept for a fictional recipe and cooking website.",
+        descriptionFull: [
+            "1st paragraph of the description here."
+        ],
+        links: {
+            "View": "#"
+        },
+        techStack: [
+            "html", "css", "sass", "js", "vue", "illustrator"
+        ]
+    },
+    titaniumthemepicker: {
+        id: "titaniumthemepicker",
+        title: "Axway Titanium app theme creator tool.",
+        screenshot: "img/thumbnail-titaniumthemepicker.png",
+        descriptionBrief: "A tool for easily creating/previewing new Titanium app themes and generating the theme code.",
+        descriptionFull: [
+            "1st paragraph of the description here."
+        ],
+        links: {
+            "Demo": "#",
+            "GitHub": "#"
+        },
+        techStack: [
+            "html", "css", "sass", "js", "vue", "illustrator"
+        ]
+    },
+    compressioncloset: {
+        id: "compressioncloset",
+        title: "The Compression Closet website.",
+        screenshot: "img/thumbnail-compressioncloset.png",
+        descriptionBrief: "E-commerce WordPress website developed for a lymphedema garment retailer.",
+        descriptionFull: [
+            "1st paragraph of the description here."
+        ],
+        links: {
+            "Demo": "#",
+            "GitHub": "#"
+        },
+        techStack: [
+            "html", "css", "sass", "js", "vue", "illustrator"
+        ]
+    },
+    rcv: {
+        id: "rcv",
+        title: "Rank Choice Vote website UX/UI.",
+        screenshot: "img/thumbnail-rcv.png",
+        descriptionBrief: "Interface and components designed for RCV.vote: a web app for rank choice voting.",
+        descriptionFull: [
+            "1st paragraph of the description here."
+        ],
+        links: {
+            "Demo": "#",
+            "GitHub": "#"
+        },
+        techStack: [
+            "html", "css", "sass", "js", "vue", "illustrator"
+        ]
+    }
+};
+
+/*---------------------------------------------------------*/
+/*  SVG icons to use for links to work                     */
+/*---------------------------------------------------------*/
+
+function workLinkSvgs(key) {
+    switch (key) {
+        case "View":
+            return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+    <line x1="10" y1="14" x2="20" y2="4" />
+    <polyline points="15 4 20 4 20 9" />
+</svg>`
+            break;
+        case "Demo":
+            return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+    <circle cx="12" cy="12" r="3"/>
+</svg>`
+            break;
+        case "GitHub":
+            return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+</svg>`
+            break;
+        default:
+            break;
+    }
+}
+
+/*---------------------------------------------------------*/
 /*  Screenshot carousel thing                              */
 /*---------------------------------------------------------*/
 
@@ -229,20 +395,97 @@ window.onload = function () {
 }
 
 /*---------------------------------------------------------*/
+/*  Create the "My Work" section                           */
+/*---------------------------------------------------------*/
+
+var workSection = document.querySelector(".work-content-grid"),
+    workItemKeys = Object.keys(myWork);
+
+// Clear whatever work is being shown by default
+workSection.innerHTML = "";
+
+// Start going through each work item in the myWork array (at the very top)
+for (let i = 0; i < workItemKeys.length; i++) {
+
+    let workItemLinks = "",
+        workItemLinksKeys = Object.keys(myWork[workItemKeys[i]].links);
+
+    // 1) Create the HTML string of all the link buttons to accompany the work item's thumbnail
+    for (let j = 0; j < workItemLinksKeys.length; j++) {
+
+        // Get the SVG icon for this particular work link
+        let workItemLinkSvg = workLinkSvgs(workItemLinksKeys[j]);
+
+        // Append a link with
+        workItemLinks += `<a href="${myWork[workItemKeys[i]].links[j]}" class="button button-small">
+    ${workItemLinkSvg}
+    ${workItemLinksKeys[j]}
+</a>
+`;
+    }
+
+    // 2) Create the HTML string for the work item
+    let htmlTemplate = `<div class="work-item" id="work-${myWork[workItemKeys[i]].id}">
+    <img class="work-item-background" src="${myWork[workItemKeys[i]].screenshot}" alt="" role="presentation">
+    <div class="work-item-content">
+        <div class="work-item-text">
+            <h3 class="work-item-title">
+                ${myWork[workItemKeys[i]].title}
+            </h3>
+            <div class="work-item-description">
+                ${myWork[workItemKeys[i]].descriptionBrief}
+            </div>
+        </div>
+        <div class="work-buttons">
+            ${workItemLinks}
+        </div>
+    </div>
+</div>`
+    
+    // Add the HTML above to the DOM
+    workSection.insertAdjacentHTML("beforeend", htmlTemplate);
+}
+
+/*---------------------------------------------------------*/
 /*  Work modal pop-up                                      */
 /*---------------------------------------------------------*/
 
 var modal = document.querySelector(".work-modal"),
     workItems = document.querySelectorAll(".work-item");
 
-modal.addEventListener("click", function() {
-    document.body.classList.toggle("modal-active");
+// Show the work modal when a work item is clicked
+workItems.forEach(function (item, i) {
+
+    // When a work item is clicked, activate the modal and populate its content with the corresponding work item's info
+    item.addEventListener("click", function () {
+
+        // Loop through all the description paragraphs to create
+        let modalDescriptionHtml = ``;
+        for (let j = 0; j < myWork[workItemKeys[i]].descriptionFull.length; j++) {
+            modalDescriptionHtml += `<p>${myWork[workItemKeys[i]].descriptionFull[j]}</p>
+`
+        }
+
+        // Loop through all the tech stack items to create
+        let techStackHtml = ``;
+        for (let k = 0; k < myWork[workItemKeys[i]].techStack.length; k++) {
+            techStackHtml += `<li><img src="img/icon-${myWork[workItemKeys[i]].techStack[k]}.svg" alt="${myWork[workItemKeys[i]].techStack[k]}" /></li>
+`
+        }
+
+        // Add the "modal-active" class to the document body
+        document.body.classList.add("modal-active");
+
+
+        document.querySelector(".work-modal-title").innerHTML = myWork[workItemKeys[i]].title;
+        document.querySelector(".work-modal-screenshot").setAttribute("src", myWork[workItemKeys[i]].screenshot);
+        document.querySelector(".tech-stack-list").innerHTML = techStackHtml;
+        document.querySelector(".work-modal-description").innerHTML = modalDescriptionHtml;
+    });
 });
 
-workItems.forEach(function(item, index) {
-    item.addEventListener("click", function () {
-        document.body.classList.toggle("modal-active");
-    });
+modal.addEventListener("click", function() {
+    document.body.classList.remove("modal-active");
 });
 
 
