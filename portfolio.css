@@ -572,7 +572,7 @@ hr.hr-full-width {
 
 .hero__name {
   font-family: "Work Sans", "Roboto", sans-serif;
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: normal;
   line-height: 1;
 }
@@ -811,6 +811,11 @@ hr.hr-full-width {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.hero__buttons > * {
+  margin-bottom: 1rem;
 }
 
 .hero__buttons > *:not(:last-child) {
@@ -873,7 +878,7 @@ section:not(.hero) {
 
 .resume,
 .work {
-  padding: 6rem 2rem;
+  padding: 4rem 1rem;
 }
 
 .section-intro {
@@ -896,7 +901,6 @@ section:not(.hero) {
 
 .resume-content {
   margin: 0 auto;
-  padding: 1rem;
 }
 
 .resume-thumbnail {
@@ -1197,8 +1201,15 @@ footer > *:last-child {
   .hero-content {
     grid-template-areas: "hero-left" "hero-right";
   }
+  .hero__name {
+    font-size: 3rem;
+  }
   .terminal {
     font-size: 0.9375em;
+  }
+  .resume,
+  .work {
+    padding: 6rem 2rem;
   }
   .resume-content {
     padding: 2rem;

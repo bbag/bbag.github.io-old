@@ -9,7 +9,9 @@ var myWork = {
         screenshot: "img/thumbnail-titanium.png",
         descriptionBrief: "Landing page for Axway's cross-platform mobile app development tool: Titanium.",
         descriptionFull: [
-            "Landing page for Axway's cross-platform mobile app development tool: Titanium."
+            "Titanium is a tool for building cross-platform native mobile applications using a single JavaScript codebase.",
+            "I worked with the Titanium team at Axway to design the official new &ldquo;microsite&rdquo; for Titanium &mdash; a subdomain of the main Axway website that would serve as the introduction and documentation hub for out Titanium product.",
+            "This new design was drafted (<a href='https://bbag.github.io/titanium-site/' target='_blank'>demo</a>) entirely by me, from pure HTML, CSS, and JS &mdash; no CMS or frameworks used."
         ],
         links: {
             "View": "https://appcelerator.github.io/titanium-docs/",
@@ -58,7 +60,12 @@ var myWork = {
         screenshot: "img/thumbnail-bjjtracker.png",
         descriptionBrief: "Reactive local dashboard to track and record my personal goal of reaching 100 BJJ training sessions per year.",
         descriptionFull: [
-            "Reactive local dashboard to track and record my personal goal of reaching 100 BJJ training sessions per year."
+            "Brazilian jiu-jitsu (BJJ) is a sport based around submission grappling, where the object is to use throws, locks, chokes, and other non-striking techniques to subdue an opponent.",
+            "Some people also refer to it as &ldquo;involuntary yoga&rdquo; or &ldquo;the art of folding clothes with people still inside them.&rdquo; :)",
+            "I built this dashboard and tracker tool (with reactivity powered by <a href='https://vuejs.org/' target='_blank'>Vue.js</a>) as a personal project to record and monitor my own BJJ training progress. My personal goal was to get 100 traning sessions in 2020, and this little web app helped me see how my training was going, keep track of my yearly pace, and see a breakdown of the tpyes of training I was doing.",
+            "Sadly, COVID-19 threw a wrench in my training goals (you can&rsquo;t exactly socially distance while trying to wrestle someone).",
+            "But one day this will come in handy again. :)",
+            "Check out the demo below, or view my code on GitHub to see it for yourself!"
         ],
         links: {
             "Demo": "https://bbag.github.io/bjj-goal-tracker/",
@@ -120,7 +127,8 @@ var myWork = {
         screenshot: "img/thumbnail-rcv.png",
         descriptionBrief: "Interface and components designed for RCV.vote: a web app for rank choice voting.",
         descriptionFull: [
-            "Interface and components designed for RCV.vote: a web app for rank choice voting."
+            "Interface and components designed for <a href='https://rcv.vote/' target='_blank'>RCV.vote</a>: a web app for making rank choice voting easy.",
+            "<strong>Note:</strong> this interface is still a work-in-progress, but more will be showcased soon!"
         ],
         links: {
             // "Demo": "#",
