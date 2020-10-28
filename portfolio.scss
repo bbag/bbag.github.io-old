@@ -28,17 +28,26 @@
 // Screen sizes: 576px, 768px, 992px, 1200px
 $screen-sizes: (
     "sm": 36rem,
-    "md": 48rem,
-    "lg": 62rem,
+    "md": 62rem,
+    "lg": 86rem,
+    "xl": 110rem,
+    "xxl": 124rem
+);
+
+// Container max-widths
+$container-widths: (
+    "sm": 72rem,
+    "md": 75rem,
+    "lg": 78rem,
     "xl": 86rem,
-    "xxl": 110rem,
-    "xxxl": 124rem
+    "xxl": 100rem
 );
 
 :root {
     --color-background: #F2F5FB;
     --color-primary: #CA2127;
     --color-primary-alt: #B31D22;
+    --color-primary-faint: rgba(210, 38, 48, 0);
     --color-shadow: rgba(202, 33, 39, 0.25);
     // --color-primary: #519E44;
     // --color-primary-alt: #458C39;
@@ -555,6 +564,15 @@ body {
     // font-weight: 300;
 }
 
+a {
+    color: var(--color-primary);
+    transition: color 400ms ease;
+
+    &:hover {
+        color: var(--color-primary-alt);
+    }
+}
+
 p {
     line-height: 1.5;
 }
@@ -568,8 +586,17 @@ hr {
     border: 0;
     border-radius: 1em;
     height: 0.1875rem;
+    margin: 1rem auto;
     max-width: 18rem;
     outline: none;
+
+    &.hr-full-width {
+        max-width: 100%;
+    }
+
+    .work-modal-content & {
+        margin: 2rem 0;
+    }
 }
 
 .content-container {
@@ -625,19 +652,19 @@ hr {
 }
 
 .button-secondary {
-    background: rgba(210, 38, 48, 0);
+    background: none;
     color: var(--color-primary);
 
     &:hover,
     &:focus {
-        background: rgba(210, 38, 48, 0.08);
+        background: var(--color-primary-faint);
         color: var(--color-primary-alt);
         outline: none;
     }
 }
 
 .button.step-button {
-    background: rgba(210, 38, 48, 0);
+    background: rgba(0, 0, 0, 0);
     border: 0;
     color: var(--color-primary);
     min-height: auto;
@@ -1072,6 +1099,53 @@ section:not(.hero) {
     background: #FFF;
 }
 
+.resume-content {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.resume-thumbnail {
+    border-radius: 0.375rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto 4rem;
+    max-width: 100%;
+    transition: all 400ms ease;
+    width: 24rem;
+
+    &:hover {
+        box-shadow: 0 0.375rem 1.875rem  rgba(0, 0, 0, 0.25);
+    }
+}
+
+.resume-text {
+    flex: 1 1 auto;
+}
+
+.resume-position-title {
+    margin-bottom: 0.5rem;
+
+    &:not(:first-child) {
+        margin-top: 2rem;
+    }
+}
+
+.resume-position-subtitle {
+    display: flex;
+    font-style: italic;
+    font-weight: normal;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.resume-list {
+    line-height: 1.5;
+
+    & li {
+        margin-bottom: 1rem;
+    }
+}
+
 .avatar {
     border-radius: 100vh;
     display: block;
@@ -1281,18 +1355,31 @@ body.modal-active {
 .work-modal-subtitle {
     color: var(--color-primary);
     font-size: 1.25rem;
+
+    &:not(:first-child) {
+        margin-top: 2rem;
+    }
 }
 
-.tech-stack-list {
+.button[data-close-modal]:last-child {
+    margin-bottom: 2rem;
+}
+
+.tech-stack-list,
+.work-modal-links {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    margin: 0 0 2rem;
+    margin: 0;
     padding: 0;
 
     & img {
         margin: 0.5rem;
         width: 3rem;
+    }
+
+    & li:not(:last-child) .button {
+        margin-right: 1rem;
     }
 }
 
@@ -1316,7 +1403,7 @@ footer {
         gap: 2rem;
         grid-template-columns: 1fr;
         justify-items: center;
-        max-width: 72rem;
+        max-width: map-get($container-widths, "sm");
         padding: 2rem;
     }
 
@@ -1330,6 +1417,10 @@ footer {
         font-size: 0.9375em;
     }
 
+    .resume-content {
+        padding: 2rem;
+    }
+
     .work-content-grid {
         gap: 2rem;
         grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
@@ -1340,15 +1431,10 @@ footer {
     }
 }
 
-/* #{rem-to-px(map-get($screen-sizes, "lg"))} */
-@media screen and (min-width: map-get($screen-sizes, "lg")) {
+/* #{rem-to-px(map-get($screen-sizes, "md"))} */
+@media screen and (min-width: map-get($screen-sizes, "md")) {
     .hero {
         padding-bottom: 0;
-    }
-    
-    .hero-content {
-        gap: 2rem;
-        max-width: 72rem;
     }
 
     .hero-content {
@@ -1364,13 +1450,28 @@ footer {
         max-width: 100%;
     }
 
+    .resume-content {
+        display: flex;
+        max-width: 62rem;
+        padding: 2rem;
+    }
+
+    .resume-thumbnail-container {
+        flex: 0 0 14rem;
+        margin-right: 3rem;
+    }
+
+    .resume-thumbnail {
+        margin: 0 auto;
+    }
+
     .work-content-grid {
         grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
     }
 }
 
-/* #{rem-to-px(map-get($screen-sizes, "xl"))} */
-@media screen and (min-width: map-get($screen-sizes, "xl")) {
+/* #{rem-to-px(map-get($screen-sizes, "lg"))} */
+@media screen and (min-width: map-get($screen-sizes, "lg")) {
     .hero {
         // color: green;
         font-size: 0.875rem;
@@ -1378,11 +1479,20 @@ footer {
 
     .hero-content {
         gap: 5rem;
-        max-width: 78rem;
+        max-width: map-get($container-widths, "lg");
     }
     
     .hero-content {
         grid-template-columns: minmax(0, 1fr) 28rem;
+    }
+
+    .resume-content {
+        max-width: 72rem;
+    }
+
+    .resume-thumbnail-container {
+        flex: 0 0 18rem;
+        margin-right: 4rem;
     }
 
     .work-content-grid {
@@ -1390,8 +1500,8 @@ footer {
     }
 }
 
-/* #{rem-to-px(map-get($screen-sizes, "xxl"))} */
-@media screen and (min-width: map-get($screen-sizes, "xxl")) {
+/* #{rem-to-px(map-get($screen-sizes, "xl"))} */
+@media screen and (min-width: map-get($screen-sizes, "xl")) {
     .hero {
         // color: blue;
         font-size: 1rem;
@@ -1399,7 +1509,7 @@ footer {
     
     .hero-content {
         gap: 6rem;
-        max-width: 86rem;
+        max-width: map-get($container-widths, "xl");
     }
 
     .hero-content {
@@ -1407,8 +1517,8 @@ footer {
     }
 }
 
-/* #{rem-to-px(map-get($screen-sizes, "xxxl"))} */
-@media screen and (min-width: map-get($screen-sizes, "xxxl")) {
+/* #{rem-to-px(map-get($screen-sizes, "xxl"))} */
+@media screen and (min-width: map-get($screen-sizes, "xxl")) {
     .hero {
         // color: red;
         font-size: 1.25rem;
@@ -1416,7 +1526,7 @@ footer {
 
     .hero-content {
         gap: 8rem;
-        max-width: 100rem;
+        max-width: map-get($container-widths, "xxl");
     }
 
     .hero-content {

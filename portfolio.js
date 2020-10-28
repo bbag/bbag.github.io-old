@@ -9,14 +9,12 @@ var myWork = {
         screenshot: "img/thumbnail-titanium.png",
         descriptionBrief: "Landing page for Axway's cross-platform mobile app development tool: Titanium.",
         descriptionFull: [
-            "1st paragraph of the description for Titanium and stuff here.",
-            "2nd pragraph lol.",
-            "Third paragraph that's really long and goes on about all sorts of details regarding this project and henceforth like such as."
+            "Landing page for Axway's cross-platform mobile app development tool: Titanium."
         ],
         links: {
-            "View": "#mainlink",
-            "Demo": "#demolink",
-            "GitHub": "#githublink"
+            "View": "https://appcelerator.github.io/titanium-docs/",
+            "Demo": "https://bbag.github.io/titanium-site/",
+            "GitHub": "https://github.com/bbag/titanium-site"
         },
         techStack: [
             "html", "css", "sass", "js", "vue", "illustrator"
@@ -28,7 +26,7 @@ var myWork = {
         screenshot: "img/thumbnail-digitalelement.png",
         descriptionBrief: "Interactive, 3D visualization of the types of data provided by Digital Element's NetAcuity IP geolocation solution.",
         descriptionFull: [
-            "1st paragraph of the 3D globe description here."
+            "Interactive, 3D visualization of the types of data provided by Digital Element's NetAcuity IP geolocation solution."
         ],
         links: {
             "View": "https://www.digitalelement.com/geolocation/",
@@ -45,13 +43,13 @@ var myWork = {
         screenshot: "img/thumbnail-atlprime.png",
         descriptionBrief: "WordPress website developed for independent medical practice in Atlanta.",
         descriptionFull: [
-            "1st paragraph of the ATL Prime Physicians website description here."
+            "WordPress website developed for independent medical practice in Atlanta."
         ],
         links: {
             "View": "https://www.atlantaprimephysicians.com"
         },
         techStack: [
-            "html", "css", "sass", "js", "vue", "illustrator"
+            "html", "css", "sass", "js", "illustrator", "photoshop"
         ]
     },
     bjjtracker: {
@@ -60,11 +58,11 @@ var myWork = {
         screenshot: "img/thumbnail-bjjtracker.png",
         descriptionBrief: "Reactive local dashboard to track and record my personal goal of reaching 100 BJJ training sessions per year.",
         descriptionFull: [
-            "1st paragraph of the description here."
+            "Reactive local dashboard to track and record my personal goal of reaching 100 BJJ training sessions per year."
         ],
         links: {
-            "Demo": "#",
-            "GitHub": "#"
+            "Demo": "https://bbag.github.io/bjj-goal-tracker/",
+            "GitHub": "https://github.com/bbag/bjj-goal-tracker"
         },
         techStack: [
             "html", "css", "sass", "js", "vue", "illustrator"
@@ -76,13 +74,13 @@ var myWork = {
         screenshot: "img/thumbnail-simplekitchen.png",
         descriptionBrief: "A UX/UI concept for a fictional recipe and cooking website.",
         descriptionFull: [
-            "1st paragraph of the description here."
+            "A UX/UI concept for a fictional recipe and cooking website."
         ],
         links: {
-            "View": "#"
+            "View": "https://imgur.com/DO0Kzby"
         },
         techStack: [
-            "html", "css", "sass", "js", "vue", "illustrator"
+            "illustrator", "photoshop"
         ]
     },
     titaniumthemepicker: {
@@ -91,14 +89,14 @@ var myWork = {
         screenshot: "img/thumbnail-titaniumthemepicker.png",
         descriptionBrief: "A tool for easily creating/previewing new Titanium app themes and generating the theme code.",
         descriptionFull: [
-            "1st paragraph of the description here."
+            "A tool for easily creating/previewing new Titanium app themes and generating the theme code."
         ],
         links: {
-            "Demo": "#",
-            "GitHub": "#"
+            "Demo": "https://bbag.github.io/titanium-theme-creator/",
+            "GitHub": "https://github.com/bbag/titanium-theme-creator"
         },
         techStack: [
-            "html", "css", "sass", "js", "vue", "illustrator"
+            "html", "css", "sass", "js", "vue"
         ]
     },
     compressioncloset: {
@@ -107,14 +105,13 @@ var myWork = {
         screenshot: "img/thumbnail-compressioncloset.png",
         descriptionBrief: "E-commerce WordPress website developed for a lymphedema garment retailer.",
         descriptionFull: [
-            "1st paragraph of the description here."
+            "E-commerce WordPress website developed for a lymphedema garment retailer."
         ],
         links: {
-            "Demo": "#",
-            "GitHub": "#"
+            "View": "https://www.thecompressioncloset.com/"
         },
         techStack: [
-            "html", "css", "sass", "js", "vue", "illustrator"
+            "html", "css", "sass", "js", "php", "illustrator"
         ]
     },
     rcv: {
@@ -123,11 +120,11 @@ var myWork = {
         screenshot: "img/thumbnail-rcv.png",
         descriptionBrief: "Interface and components designed for RCV.vote: a web app for rank choice voting.",
         descriptionFull: [
-            "1st paragraph of the description here."
+            "Interface and components designed for RCV.vote: a web app for rank choice voting."
         ],
         links: {
-            "Demo": "#",
-            "GitHub": "#"
+            // "Demo": "#",
+            // "GitHub": "#"
         },
         techStack: [
             "html", "css", "sass", "js", "vue", "illustrator"
@@ -327,6 +324,7 @@ function setNewColorTheme(currentDot) {
     document.documentElement.style.cssText = (
         "--color-primary: " + newColor + ";"
         + "--color-primary-alt: hsl(" + newHSL.h + ", " + newHSL.s2 + "%, " + newHSL.l2 + "%);"
+        + "--color-primary-faint: hsla(" + newHSL.h + ", " + newHSL.s + "%, " + newHSL.l + "%, 0.08);"
         + "--color-shadow: hsla(" + newHSL.h + ", " + newHSL.s + "%, " + newHSL.l + "%, 0.25)"
     );
 }
@@ -416,8 +414,8 @@ for (let i = 0; i < workItemKeys.length; i++) {
         // Get the SVG icon for this particular work link
         let workItemLinkSvg = workLinkSvgs(workItemLinksKeys[j]);
 
-        // Append a link with
-        workItemLinks += `<a href="${myWork[workItemKeys[i]].links[j]}" class="button button-small">
+        // Append a link button to the DOM
+        workItemLinks += `<a href="${myWork[workItemKeys[i]].links[workItemLinksKeys[j]]}" class="button button-small">
     ${workItemLinkSvg}
     ${workItemLinksKeys[j]}
 </a>
@@ -442,7 +440,7 @@ for (let i = 0; i < workItemKeys.length; i++) {
     </div>
 </div>`
     
-    // Add the HTML above to the DOM
+    // Append the HTML above to the DOM
     workSection.insertAdjacentHTML("beforeend", htmlTemplate);
 }
 
@@ -450,7 +448,7 @@ for (let i = 0; i < workItemKeys.length; i++) {
 /*  Work modal pop-up                                      */
 /*---------------------------------------------------------*/
 
-var modal = document.querySelector(".work-modal"),
+var buttonsCloseModal = document.querySelectorAll("[data-close-modal]"),
     workItems = document.querySelectorAll(".work-item");
 
 // Show the work modal when a work item is clicked
@@ -476,18 +474,44 @@ workItems.forEach(function (item, i) {
         // Add the "modal-active" class to the document body
         document.body.classList.add("modal-active");
 
-
+        // Add all the content of the clicked work item to the work modal that pops up
         document.querySelector(".work-modal-title").innerHTML = myWork[workItemKeys[i]].title;
         document.querySelector(".work-modal-screenshot").setAttribute("src", myWork[workItemKeys[i]].screenshot);
         document.querySelector(".tech-stack-list").innerHTML = techStackHtml;
         document.querySelector(".work-modal-description").innerHTML = modalDescriptionHtml;
+
+        let modalLinks = "",
+            modalLinksKeys = Object.keys(myWork[workItemKeys[i]].links);
+
+        // Create the HTML string of all the links to appear on the active work item's modal
+        for (let j = 0; j < modalLinksKeys.length; j++) {
+
+            // Get the SVG icon for this particular work link
+            let modalLinkSvg = workLinkSvgs(modalLinksKeys[j]);
+
+            // Append a list item for the link under the Links section
+            modalLinks += `<li>
+    <a href="${myWork[workItemKeys[i]].links[modalLinksKeys[j]]}" class="button button-small">
+        ${modalLinkSvg}
+        ${modalLinksKeys[j]}
+    </a></li>
+    `;
+        }
+
+        // Add some flavor text in case the Links section is empty
+        if (modalLinksKeys.length == 0) {
+            modalLinks += `<em>I'm working to get the links to preview this right now &mdash; it should be here soon!</em>`
+        }
+
+        document.querySelector(".work-modal-links").innerHTML = modalLinks;
     });
 });
 
-modal.addEventListener("click", function() {
-    document.body.classList.remove("modal-active");
-});
-
+for (let i = 0; i < buttonsCloseModal.length; i++) {
+    buttonsCloseModal[i].addEventListener("click", function () {
+        document.body.classList.remove("modal-active");
+    });
+};
 
 /*---------------------------------------------------------*/
 /*  Smooth scroll to work samples                          */
