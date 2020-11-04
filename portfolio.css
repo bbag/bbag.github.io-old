@@ -1089,12 +1089,22 @@ body.modal-active {
   overflow: hidden;
 }
 
+body.modal-active .work-modal,
+body.modal-active .work-modal-cover {
+  visibility: visible;
+  transition: transform 500ms cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+body.modal-active .work-modal-cover {
+  transition-delay: 500ms;
+}
+
 .work-modal,
 .work-modal-cover {
   height: 100%;
   left: 0;
   top: 0;
-  transition: transform 500ms cubic-bezier(0.8, 0, 0.2, 1);
+  transition: all 500ms cubic-bezier(0.8, 0, 0.2, 1);
   width: 100%;
 }
 
@@ -1102,6 +1112,8 @@ body.modal-active {
   background: #FFF;
   position: fixed;
   transform: translateY(100%);
+  transition-delay: 500ms;
+  visibility: hidden;
   z-index: 3;
 }
 
@@ -1113,7 +1125,6 @@ body.modal-active {
   background: var(--color-primary);
   content: "";
   position: absolute;
-  transition-delay: 500ms;
   z-index: 2;
 }
 

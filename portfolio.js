@@ -465,14 +465,14 @@ workItems.forEach(function (item, i) {
     // When a work item is clicked, activate the modal and populate its content with the corresponding work item's info
     item.addEventListener("click", function () {
 
-        // Loop through all the description paragraphs to create
+        // Loop through all the description paragraphs to be created
         let modalDescriptionHtml = ``;
         for (let j = 0; j < myWork[workItemKeys[i]].descriptionFull.length; j++) {
             modalDescriptionHtml += `<p>${myWork[workItemKeys[i]].descriptionFull[j]}</p>
 `
         }
 
-        // Loop through all the tech stack items to create
+        // Loop through all the tech stack items to be created
         let techStackHtml = ``;
         for (let k = 0; k < myWork[workItemKeys[i]].techStack.length; k++) {
             techStackHtml += `<li><img src="img/icon-${myWork[workItemKeys[i]].techStack[k]}.svg" alt="${myWork[workItemKeys[i]].techStack[k]}" /></li>
@@ -481,6 +481,10 @@ workItems.forEach(function (item, i) {
 
         // Add the "modal-active" class to the document body
         document.body.classList.add("modal-active");
+
+        // Scroll the modal div back to the top, in case it was scrolled down earlier
+        console.log(document.querySelector(".work-modal-content-container").scrollTop)
+        document.querySelector(".work-modal-content-container").scrollTop = 0;
 
         // Add all the content of the clicked work item to the work modal that pops up
         document.querySelector(".work-modal-title").innerHTML = myWork[workItemKeys[i]].title;
