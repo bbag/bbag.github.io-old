@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Billy Baggerman | UX/UI Engineer, Designer, Front-end Developer</title>
+        <link rel="stylesheet" href="portfolio.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Fira+Code&family=Work+Sans:wght@800&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+    <body>
+        <section class="hero">
+            <!-- <img class="hero-background" src="img/dots-background.svg" alt="">
+            <canvas id="heroCanvas"></canvas> -->
+            <div class="hero-content">
+                <div class="hero--left">
+                    <h1 class="hero__name">Billy Baggerman.</h1>
+                    <h2 class="hero__title"><span>&mdash; UX/UI designer, front-end developer, BJJ geek.</span></h2>
+                    <p class="hero__intro">I combine <strong class="hero__intro__highlight">15+ years</strong> of web design experience with a love for front-end development to create eye-catching, pleasant, and functional user interfaces.</p>
+                    <div class="terminal"><span class="terminal--selector">#BillyBaggerman</span> {
+<div class="terminal--line"><span class="terminal--property">location</span>: <span class="terminal--value">Atlanta GA</span>;</div><div class="terminal--line"><span class="terminal--property">role</span>: <span class="terminal--value">UX/UI Engineer + Designer + Front-end Developer</span>;</div><div class="terminal--line"><span class="terminal--property">design-skills</span>: <span class="terminal--value">Adobe XD</span>, <span class="terminal--value">Illustrator</span>, <span class="terminal--value">Photoshop</span>, <span class="terminal--value">InVision</span>, <span class="terminal--value">Figma</span>;</div><div class="terminal--line"><span class="terminal--property">dev-skills</span>: <span class="terminal--value">HTML</span>, <span class="terminal--value">CSS</span>, <span class="terminal--value">SASS</span>, <span class="terminal--value">JavaScript</span>, <span class="terminal--value">Vue.js</span>, <span class="terminal--value">WordPress</span>, <span class="terminal--value">PHP</span>;</div><div class="terminal--line"><span class="terminal--property">learning</span>: <span class="terminal--value">React</span>, <span class="terminal--value">Svelte</span>, <span class="terminal--value">three.js</span>, <span class="terminal--value">BabylonJS</span>;</div>}</div>
+                    <div class="hero__buttons">
+                        <button class="button" data-scroll="section-resume">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M17 21H7a2 2 0 0 1 -2 -2V5a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                                <line x1="9" y1="9" x2="10" y2="9" />
+                                <line x1="9" y1="13" x2="15" y2="13" />
+                                <line x1="9" y1="17" x2="15" y2="17" />
+                            </svg>
+                            Resume
+                        </button>
+                        <button class="button" data-scroll="section-work">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <polyline points="7 8 3 12 7 16" />
+                                <polyline points="17 8 21 12 17 16" />
+                                <line x1="14" y1="4" x2="10" y2="20" />
+                            </svg>
+                            My Work
+                        </button>
+                        <a class="button" href="mailto:bill.baggerman@gmail.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M3 20l1.3 -3.9a9 8 0 1 1 3.4 2.9l-4.7 1" />
+                                <line x1="12" y1="12" x2="12" y2="12.01" />
+                                <line x1="8" y1="12" x2="8" y2="12.01" />
+                                <line x1="16" y1="12" x2="16" y2="12.01" />
+                            </svg>
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                <div class="hero--right">
+                    <div class="hero__thumbnails">
+                        <img class="thumbnail--sizer" src="img/thumbnail-titanium.png" alt="">
+                        <img class="thumbnail thumbnail--active" src="img/thumbnail-simplekitchen.png" data-color="#5BAB38" data-target="work-simplekitchen" alt="UX/UI design for recipe landing page">
+                        <img class="thumbnail thumbnail--right" src="img/thumbnail-titanium.png" data-color="#CA2127" data-target="work-titanium" alt="Subdomain website for Axway Titanium">
+                        <img class="thumbnail thumbnail--right" src="img/thumbnail-digitalelement.png" data-color="#F4941C" data-target="work-digitalelement" alt="Interactive 3D globe for Digital Element">
+                        <img class="thumbnail thumbnail--right" src="img/thumbnail-bjjtracker.png" data-color="#282C34" data-target="work-bjjtracker" alt="Personal BJJ class analytics dashboard">
+                        <img class="thumbnail thumbnail--right" src="img/thumbnail-atlprime.png" data-color="#3458B2" data-target="work-atlprime" alt="Atlanta Prime Physicians website">
+                        <div class="thumbnail-info-container">
+                            <span class="thumbnail-info">
+                                <h3>Project:</h3>
+                                <span class="thumbnail-info-title">
+                                    Axway Titanium developer site
+                                </span>
+                            </span>
+                            <span>
+                                <button class="button button-small" id="checkItOut">
+                                    Check It Out
+                                </button>
+                            </span>
+                        </div>
+                        <div class="thumbnail-reveal-1">
+                            <span>Work samples.</span>
+                        </div>
+                    </div>
+                    <div class="thumbnail-controls">
+                        <button class="button step-button disabled" id="buttonPrev">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18">
+                                <line x1="20" y1="10" x2="4" y2="10" />
+                                <polyline points="10 16 4 10 10 4" />
+                            </svg>
+                        </button>
+                        <div id="dots">
+                            <span class="dot dot-active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="button step-button" id="buttonNext">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18">
+                                <line x1="4" y1="10" x2="20" y2="10" />
+                                <polyline points="14 4 20 10 14 16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <svg class="hero-bottom-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80">
+                <path fill="#FFF" d="M0 80C120 80 120 0 240 0s120 80 240 80H0z" />
+                <rect x="230" y="26" width="20" height="32" rx="10" data-scroll="section-resume" />
+                <line x1="240" y1="32" x2="240" y2="36" />
+            </svg>
+        </section>
+        <section class="resume" id="section-resume">
+            <div class="section-intro">
+                <h2>Resume.</h2>
+                <p><em>&ldquo;I&rsquo;m not like those other marketing folks, I swear!&rdquo;</em>></p>
+                <hr />
+            </div>
+            <div class="resume-content">
+                <a class="resume-thumbnail-container" href="resume/baggerman-resume.pdf" target="_blank">
+                    <img class="resume-thumbnail" src="img/resume-thumbnail.png" alt="Resume thumbnail preview image">
+                </a>
+                <div class="resume-text">
+                    <h3 class="resume-position-title">Freelance Web Developer.</h3>
+                    <h4 class="resume-position-subtitle">
+                        <span class="resume-company">Self employed</span>
+                        <span class="resume-timeframe">Oct 2017 – present</span>
+                    </h4>
+                    <ul class="resume-list">
+                        <li>Helped clients in a variety of industries ranging from healthcare, fitness, and technology identify actionable ways to improve their digital channels, from company website to social media strategies, and execute those changes to enhance their online presence.</li>
+                        <li>Services have included brand unification, copywriting/messaging strategy, rebranding, SEO, site development, site analytics, graphic design, and more.</li>
+                    </ul>
+                    <h3 class="resume-position-title">Principal Marketing Manager, Developer Marketing.</h3>
+                    <h4 class="resume-position-subtitle">
+                        <span class="resume-company">Axway, Inc.</span>
+                        <span class="resume-timeframe">Jul 2019 – present</span>
+                    </h4>
+                    <ul class="resume-list">
+                        <li>Led Axway’s developer-focused marketing initiatives, including revamping of developer-focused landing pages, building out developer-focused content, and writing for the Axway Developer Blog.</li>
+                        <li>Facilitated, designed, built, and optimized new and existing components and tools for developers across Axway's platform and properties.</li>
+                    </ul>
+                    <h3 class="resume-position-title">+ 2 more.</h3>
+                    <p><a href="resume/baggerman-resume.pdf" target="_blank">Download my resume</a> to see every place I've worked and studied.</p>
+                </div>
+            </div>
+        </section>
+        <section class="work" id="section-work">
+            <div class="section-intro">
+                <h2>My work.</h2>
+                <p>I've worked on a lot of fun stuff for companies, clients, and myself:</p>
+                <hr />
+            </div>
+            <div class="work-content-grid">
+                <div class="work-item" id="work-titanium">
+                    <img class="work-item-background" src="img/thumbnail-titanium.png" alt="" role="presentation">
+                    <div class="work-item-content">
+                        <div class="work-item-text">
+                            <h3 class="work-item-title">
+                                Axway Titanium website.
+                            </h3>
+                            <div class="work-item-description">
+                                Description goes here, yo.
+                            </div>
+                        </div>
+                        <div class="work-buttons">
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-digitalelement">
+                    <img class="work-item-background" src="img/thumbnail-digitalelement.png" alt="" role="presentation">
+                    <div class="work-item-content">
+                        <div class="work-item-text">
+                            <h3 class="work-item-title">
+                                3D geolocation data visualization.
+                            </h3>
+                            <div class="work-item-description">
+                                Description goes here, yo.
+                            </div>
+                        </div>
+                        <div class="work-buttons">
+                            <a href="https://www.digitalelement.com/geolocation/" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="https://bbag.github.io/3d-geolocation-globe/" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="https://github.com/bbag/3d-geolocation-globe" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-atlprime">
+                    <img class="work-item-background" src="img/thumbnail-atlprime.png" alt="" role="presentation">
+                    <div class="work-item-content">
+                        <div class="work-item-text">
+                            <h3 class="work-item-title">
+                                Atlanta Prime Physicians website.
+                            </h3>
+                            <div class="work-item-description">
+                                Description goes here, yo.
+                            </div>
+                        </div>
+                        <div class="work-buttons">
+                            <a href="https://www.digitalelement.com/geolocation/" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-bjjtracker">
+                    <img class="work-item-background" src="img/thumbnail-bjjtracker.png" alt="" role="presentation">
+                    <div class="work-item-content">
+                        <div class="work-item-text">
+                            <h3 class="work-item-title">
+                                Personal BJJ analytics dashboard.
+                            </h3>
+                            <div class="work-item-description">
+                                Description goes here, yo.
+                            </div>
+                        </div>
+                        <div class="work-buttons">
+                            <a href="https://www.digitalelement.com/geolocation/" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-simplekitchen">
+                    <img class="work-item-background" src="img/thumbnail-simplekitchen.png" alt="" role="presentation">
+                    <div class="work-item-content">
+                        <div class="work-item-text">
+                            <h3 class="work-item-title">
+                                UX/UI design for recipe landing page.
+                            </h3>
+                            <div class="work-item-description">
+                                Description goes here, yo.
+                            </div>
+                        </div>
+                        <div class="work-buttons">
+                            <a href="https://www.digitalelement.com/geolocation/" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-titaniumthemepicker">
+                    <img class="work-item-background" src="img/thumbnail-titaniumthemepicker.png" alt="" role="presentation">
+                    <div class="work-item-content">
+                        <div class="work-item-text">
+                            <h3 class="work-item-title">
+                                Axway Titanium app theme creator tool.
+                            </h3>
+                            <div class="work-item-description">
+                                Description goes here, yo.
+                            </div>
+                        </div>
+                        <div class="work-buttons">
+                            <a href="https://www.digitalelement.com/geolocation/" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-compressioncloset">
+                    <img class="work-item-background" src="img/thumbnail-compressioncloset.png" alt="" role="presentation">
+                    <div class="work-item-content">
+                        <div class="work-item-text">
+                            <h3 class="work-item-title">
+                                The Compression Closet website.
+                            </h3>
+                            <div class="work-item-description">
+                                Description goes here, yo.
+                            </div>
+                        </div>
+                        <div class="work-buttons">
+                            <a href="https://www.digitalelement.com/geolocation/" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item" id="work-rcv">
+                    <img class="work-item-background" src="img/thumbnail-rcv.png" alt="" role="presentation">
+                    <div class="work-item-content">
+                        <div class="work-item-text">
+                            <h3 class="work-item-title">
+                                Rank Choice Vote website UX/UI.
+                            </h3>
+                            <div class="work-item-description">
+                                Description goes here, yo.
+                            </div>
+                        </div>
+                        <div class="work-buttons">
+                            <a href="https://www.digitalelement.com/geolocation/" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5" />
+                                    <line x1="10" y1="14" x2="20" y2="4" />
+                                    <polyline points="15 4 20 4 20 9" />
+                                </svg>
+                                View
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Demo
+                            </a>
+                            <a href="#" class="button button-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="work-modal">
+                <div class="work-modal-content-container">
+                    <div class="work-modal-content">
+                        <button class="button button-secondary button-small" data-close-modal>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <line x1="20" y1="12" x2="4" y2="12" />
+                                <polyline points="10 18 4 12 10 6" />
+                            </svg>
+                            Back to portfolio
+                        </button>
+                        <hr class="hr-full-width" />
+                        <h3 class="work-modal-title">Title will go here.</h3>
+                        <img class="work-modal-screenshot" src="img/thumbnail-bjjtracker.png" alt="placeholder">
+                        <h4 class="work-modal-subtitle">Tech stack:</h4>
+                        <ul class="tech-stack-list">
+                            <li><img src="img/icon-html.svg" alt=""></li>
+                            <li><img src="img/icon-css.svg" alt=""></li>
+                            <li><img src="img/icon-sass.svg" alt=""></li>
+                            <li><img src="img/icon-js.svg" alt=""></li>
+                            <li><img src="img/icon-vue.svg" alt=""></li>
+                            <li><img src="img/icon-illustrator.svg" alt=""></li>
+                        </ul>
+                        <h4 class="work-modal-subtitle">About:</h4>
+                        <div class="work-modal-description">
+                            <p>This is the description. Bacon ipsum dolor amet aute kevin burgdoggen consequat officia anim, alcatra cow sint culpa incididunt commodo ullamco. Elit tempor ex, culpa pariatur ground round in sint burgdoggen sed. Jowl nostrud in, pig et ribeye tempor.</p>
+                            <p>Beef pork belly esse culpa sausage swine fatback ex, laborum tail pork chop boudin enim laboris ham irure.</p>
+                            <p>Salami veniam jowl jerky flank, esse beef pastrami. Tri-tip qui dolore, frankfurter cupim swine tail minim flank. Ball tip tenderloin shank turkey labore. Elit porchetta strip steak venison eu excepteur pork loin tongue minim ipsum veniam id ham ea short loin. Tongue proident ea prosciutto shank laborum deserunt burgdoggen pork chop.</p>
+                        </div>
+                        <h4 class="work-modal-subtitle">Links:</h4>
+                        <ul class="work-modal-links">
+                            <li>F</li>
+                        </ul>
+                        <hr class="hr-full-width" />
+                        <button class="button button-secondary button-small" data-close-modal>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <line x1="20" y1="12" x2="4" y2="12" />
+                                <polyline points="10 18 4 12 10 6" />
+                            </svg>
+                            Back to portfolio
+                        </button>
+                    </div>
+                </div>
+                <div class="work-modal-cover"></div>
+            </div>
+        </section>
+        <script type="text/javascript" src="portfolio.js"></script>
+    </body>
+</html>

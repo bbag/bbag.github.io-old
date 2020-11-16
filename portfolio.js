@@ -22,6 +22,24 @@ var myWork = {
             "html", "css", "sass", "js", "vue", "illustrator"
         ]
     },
+    griffinapp: {
+        id: "griffinapp",
+        title: "Axway &ldquo;Office Scheduler&rdquo; app UX/UI design.",
+        screenshot: "img/thumbnail-officescheduler.png",
+        descriptionBrief: "Early UX/UI mock-ups for Axway's internal mobile app to help employees return to office work safely.",
+        descriptionFull: [
+            "During the summer of 2020, I worked with a team of developers at Axway to create an internal-facing mobile app to help employees gradually return to office work safely.",
+            "The app's primary feature was the &ldquo;office scheduler&rdquo;&mdash;a calendar and scheduling tool where employees could easily schedule their in-office hours according to their teams' schedules and capacity limits set by HR.",
+            "<div class='mobile-screenshot-previews'><img src='img/preview-officescheduler-1.png'><img src='img/preview-officescheduler-2.png'><img src='img/preview-officescheduler-3.png'><img src='img/preview-officescheduler-4.png'></div>",
+            "All screenshots and mock-ups were created exclusively by me, and designed within the scope of Axway's design system and branding guidelines."
+        ],
+        links: {
+            "Demo": "https://axway869312.invisionapp.com/console/Griffin-App-ckad83uy30th901c518t46jrj/ckad8497p0mo101a30t0qdhh2/play"
+        },
+        techStack: [
+            "html", "css", "sass", "js", "vue", "illustrator"
+        ]
+    },
     digitalelement: {
         id: "digitalelement",
         title: "3D geolocation data visualization.",
@@ -37,21 +55,6 @@ var myWork = {
         },
         techStack: [
             "html", "css", "js"
-        ]
-    },
-    atlprime: {
-        id: "atlprime",
-        title: "Atlanta Prime Physicians website.",
-        screenshot: "img/thumbnail-atlprime.png",
-        descriptionBrief: "WordPress website developed for independent medical practice in Atlanta.",
-        descriptionFull: [
-            "WordPress website developed for independent medical practice in Atlanta."
-        ],
-        links: {
-            "View": "https://www.atlantaprimephysicians.com"
-        },
-        techStack: [
-            "html", "css", "sass", "js", "illustrator", "photoshop"
         ]
     },
     bjjtracker: {
@@ -73,6 +76,21 @@ var myWork = {
         },
         techStack: [
             "html", "css", "sass", "js", "vue", "illustrator"
+        ]
+    },
+    atlprime: {
+        id: "atlprime",
+        title: "Atlanta Prime Physicians website.",
+        screenshot: "img/thumbnail-atlprime.png",
+        descriptionBrief: "WordPress website developed for independent medical practice in Atlanta.",
+        descriptionFull: [
+            "WordPress website developed for independent medical practice in Atlanta."
+        ],
+        links: {
+            "View": "https://www.atlantaprimephysicians.com"
+        },
+        techStack: [
+            "html", "css", "sass", "js", "illustrator", "photoshop"
         ]
     },
     simplekitchen: {
@@ -137,7 +155,7 @@ var myWork = {
         techStack: [
             "html", "css", "sass", "js", "vue", "illustrator"
         ]
-    }
+    },
 };
 
 /*---------------------------------------------------------*/
