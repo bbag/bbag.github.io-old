@@ -518,7 +518,6 @@ workItems.forEach(function (item, i) {
         document.body.classList.add("modal-active");
 
         // Scroll the modal div back to the top, in case it was scrolled down earlier
-        console.log(document.querySelector(".work-modal-content-container").scrollTop)
         document.querySelector(".work-modal-content-container").scrollTop = 0;
 
         // Add all the content of the clicked work item to the work modal that pops up
