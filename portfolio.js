@@ -9,9 +9,9 @@ var myWork = {
         screenshot: "img/thumbnail-titanium.png",
         descriptionBrief: "Landing page for Axway's cross-platform mobile app development tool: Titanium.",
         descriptionFull: [
-            "Titanium is a tool for building cross-platform native mobile applications using a single JavaScript codebase.",
+            "Titanium is a framework for building cross-platform native mobile applications using a single JavaScript codebase.",
             "I worked with the Titanium team at Axway to design the official new &ldquo;microsite&rdquo; for Titanium &mdash; a subdomain of the main Axway website that would serve as the introduction and documentation hub for out Titanium product.",
-            "This new design was drafted (<a href='https://bbag.github.io/titanium-site/' target='_blank'>demo</a>) entirely by me, from pure HTML, CSS, and JS &mdash; no CMS or frameworks used."
+            "This new design was drafted (<a href='https://bbag.github.io/titanium-site/' target='_blank'>demo here</a>) entirely by me, from pure HTML, CSS, and JS &mdash; no CMS or frameworks used. Components were designed for the final site to be built in VuePress."
         ],
         links: {
             "View": "https://appcelerator.github.io/titanium-docs/",
@@ -46,7 +46,9 @@ var myWork = {
         screenshot: "img/thumbnail-digitalelement.png",
         descriptionBrief: "Interactive, 3D visualization of the types of data provided by Digital Element's NetAcuity IP geolocation solution.",
         descriptionFull: [
-            "Interactive, 3D visualization of the types of data provided by Digital Element's NetAcuity IP geolocation solution."
+            "During my employment at Digital Envoy, I redesigned and built various components across the company's Digital Element website. Since the company specializes in providing IP-based geolocation data, I wanted a fun way for new visitors to visualize this data in action.",
+            "The result was this interactive 3D globe that can be manually spun around, and locations on the globe's surface can be clicked to show an example of the types of geolocation data that could be provided for that location.",
+            "The tech stack for this project included three.js for rendering the canvas, and Photoshop for creating the albedo, normal, and specular maps for the globe's textures. Besides that, no other libraries or frameworks were used&mdash;just good ol' HTML, CSS, and vanilla JS!"
         ],
         links: {
             "View": "https://www.digitalelement.com/geolocation/",
@@ -84,7 +86,8 @@ var myWork = {
         screenshot: "img/thumbnail-atlprime.png",
         descriptionBrief: "WordPress website developed for independent medical practice in Atlanta.",
         descriptionFull: [
-            "WordPress website developed for independent medical practice in Atlanta."
+            "In 2020, Atlanta Prime Physicians contracted me to build a simple marketing site for their medical practice, based in Atlanta, GA.",
+            "This project involved building a custom WordPress theme from scratch, developing the practice's logo and brand, implementing appointment scheduling features on the backend, and designing the entire site flow and user experience to best fit Atlanta Prime Physicians' goals (introduce visitors to the practice, and provide an easy way to schedule telemedicine visits with a doctor)."
         ],
         links: {
             "View": "https://www.atlantaprimephysicians.com"
@@ -110,11 +113,15 @@ var myWork = {
     },
     titaniumthemepicker: {
         id: "titaniumthemepicker",
-        title: "Axway Titanium app theme creator tool.",
+        title: "Titanium app theme creator tool.",
         screenshot: "img/thumbnail-titaniumthemepicker.png",
         descriptionBrief: "A tool for easily creating/previewing new Titanium app themes and generating the theme code.",
         descriptionFull: [
-            "A tool for easily creating/previewing new Titanium app themes and generating the theme code."
+            "Titanium is a framework for building cross-platform native mobile applications using a single JavaScript codebase.",
+            "As part of Axway's developer marketing team, I saw an opportunity to make developers' lives easier by creating a tool for easily creating/previewing new color themes and generating the theme code automatically.",
+            "This web app was built with Vue.js to make the DOM reactive as the user updates the colors they want for their theme.",
+            "The phone graphics themselves are built entirely in CSS too&mdash;no raster or SVG images (aside from the icons in the bottom bar 🙂). The benefit of this is that no hacky CSS positioning and aspect ratio-ing (is that a word?) is needed to fit the preview of the app's content over the graphic of the phone. Instead, it renders and positions everything naturally and properly from the start!",
+            "One subtle but handy feature of this tool is that users can set primary and secondary colors to be used across their theme, and then set individual items to use those primary/secondary colors. Then, as the user updates those primary/secondary colors, the rest of the items will update along with it. Even better, if the user decides they want to go back to using custom colors for individual properties, their last custom color is saved for as soon as they switch back!"
         ],
         links: {
             "Demo": "https://bbag.github.io/titanium-theme-creator/",
@@ -130,7 +137,11 @@ var myWork = {
         screenshot: "img/thumbnail-compressioncloset.png",
         descriptionBrief: "E-commerce WordPress website developed for a lymphedema garment retailer.",
         descriptionFull: [
-            "E-commerce WordPress website developed for a lymphedema garment retailer."
+            "In 2019, I was contracted to build an e-commerce WordPress website for a lymphedema garment retailer.",
+            "The client had an existing WordPress codebase that needed a complete visual overhaul, as well as new features added to their store pages.",
+            "I worked with their project manager to revamp the theme for the website and solidify The Compression Closet's brand.",
+            "This project involved a heavy draft-and-revision process, going back and forth on design and UX considerations to give them the best possible final website, and progress was tracked in Asana throughout the process.",
+            "The Compression Closet was an outstanding client, and working on the entire project from brand development to site creation was both a ton of fun and extremely rewarding. They're doing great things and helping a tremendous number of people!"
         ],
         links: {
             "View": "https://www.thecompressioncloset.com/"
@@ -186,6 +197,12 @@ function workLinkSvgs(key) {
             break;
     }
 }
+
+/*---------------------------------------------------------*/
+/*  Initial console log, for all you code creepers ;)      */
+/*---------------------------------------------------------*/
+
+console.log("%cHey you, thanks for checking out my portfolio!\nIf you're looking to see what CMS or framework I used to make it, well... there isn't one. Everything here, from the graphics to the code, were all built by me from scratch. 🙂\nBut feel free to contact me at bill.baggerman@gmail.com if you ever want to know more!", "display: block; color: #5BAB38; border: 1px solid #5BAB38; padding: 8px; background: #E4F4DD");
 
 /*---------------------------------------------------------*/
 /*  Screenshot carousel thing                              */
@@ -670,16 +687,16 @@ function scrollToSection(sectionId, addTopPadding) {
 // }
 
 
-var canvas = document.getElementById("heroCanvas"),
-    ctx = canvas.getContext("2d");
+// var canvas = document.getElementById("heroCanvas"),
+//     ctx = canvas.getContext("2d");
 
-function setCanvasSize() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    canvas.width = window.innerWidth * window.devicePixelRatio;
-    canvas.height = window.innerHeight * window.devicePixelRatio;
-}
+// function setCanvasSize() {
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+//     canvas.width = window.innerWidth * window.devicePixelRatio;
+//     canvas.height = window.innerHeight * window.devicePixelRatio;
+// }
 
-setCanvasSize();
+// setCanvasSize();
 
 // Resize the canvas when the window size changes
 // window.addEventListener("resize", function () {
@@ -688,74 +705,74 @@ setCanvasSize();
 // });
 
 // Settings
-var dotRows = 24,
-    dotColumns = 32,
-// var dotRows = 2,
-//     dotColumns = 2,
-    dotSizeMin = 6,
-    dotSizeMax = 30,
-    dotFill = "rgba(0, 0, 0, 0.05)";
+// var dotRows = 24,
+//     dotColumns = 32,
+// // var dotRows = 2,
+// //     dotColumns = 2,
+//     dotSizeMin = 6,
+//     dotSizeMax = 30,
+//     dotFill = "rgba(0, 0, 0, 0.05)";
 
-// Resize the canvas when the window size changes
-window.addEventListener("resize", function () {
-    // setCanvasSize();
-    // drawCanvas();
-});
+// // Resize the canvas when the window size changes
+// window.addEventListener("resize", function () {
+//     // setCanvasSize();
+//     // drawCanvas();
+// });
 
-function Dot(x, y, radius) {
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.scaleFactor = 1;
+// function Dot(x, y, radius) {
+//     this.x = x;
+//     this.y = y;
+//     this.radius = radius;
+//     this.scaleFactor = 1;
 
-    this.draw = function () {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        ctx.fillStyle = dotFill;
-        ctx.fill();
-    }
+//     this.draw = function () {
+//         ctx.beginPath();
+//         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+//         ctx.fillStyle = dotFill;
+//         ctx.fill();
+//     }
 
-    this.update = function () {
-        // To-do: Increment the radius here...
-        if (this.radius < dotSizeMax) {
-            this.radius += this.scaleFactor;
-        } else {
-            this.radius -= this.scaleFactor;
-        }
+//     this.update = function () {
+//         // To-do: Increment the radius here...
+//         if (this.radius < dotSizeMax) {
+//             this.radius += this.scaleFactor;
+//         } else {
+//             this.radius -= this.scaleFactor;
+//         }
 
-        // ..then redraw the dot
-        this.draw();
-    }
+//         // ..then redraw the dot
+//         this.draw();
+//     }
 
-    this.draw();
-}
+//     this.draw();
+// }
 
-function init() {
+// function init() {
 
-    dotArray = [];
+//     dotArray = [];
 
-    for (let i = 0; i < (dotRows + 2); i++) {
-        for (let j = 0; j < (dotColumns + 2); j++) {
-            let x = j * canvas.width / (dotColumns + 1),
-                y = i * canvas.height / (dotRows + 1),
-                radius = dotSizeMin;
+//     for (let i = 0; i < (dotRows + 2); i++) {
+//         for (let j = 0; j < (dotColumns + 2); j++) {
+//             let x = j * canvas.width / (dotColumns + 1),
+//                 y = i * canvas.height / (dotRows + 1),
+//                 radius = dotSizeMin;
 
 
-            dotArray.push(new Dot(x, y, radius));
-        }
-    }
-    console.log(dotArray);
+//             dotArray.push(new Dot(x, y, radius));
+//         }
+//     }
+//     console.log(dotArray);
 
-}
+// }
 
-function animate(time) {
-    requestAnimationFrame(animate);
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
+// function animate(time) {
+//     requestAnimationFrame(animate);
+//     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    for (let i = 0; i < dotArray.length; i++) {
-        dotArray[i].update();
-    }
-}
+//     for (let i = 0; i < dotArray.length; i++) {
+//         dotArray[i].update();
+//     }
+// }
 
 // init();
 // animate();
