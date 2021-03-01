@@ -1394,11 +1394,12 @@ body.modal-active {
     }
 
     & li:not(:last-child) .button {
+        margin-bottom: 1rem;
         margin-right: 1rem;
     }
 }
 
-.mobile-screenshot-previews {
+.screenshot-previews {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));

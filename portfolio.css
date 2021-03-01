@@ -1192,17 +1192,18 @@ body.modal-active .work-modal-cover {
 
 .tech-stack-list li:not(:last-child) .button,
 .work-modal-links li:not(:last-child) .button {
+  margin-bottom: 1rem;
   margin-right: 1rem;
 }
 
-.mobile-screenshot-previews {
+.screenshot-previews {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   justify-items: center;
 }
 
-.mobile-screenshot-previews img {
+.screenshot-previews img {
   border: 0.25rem solid #FFF;
   border-radius: 0.5rem;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);

@@ -11,6 +11,7 @@ var myWork = {
         descriptionFull: [
             "Titanium is a framework for building cross-platform native mobile applications using a single JavaScript codebase.",
             "I worked with the Titanium team at Axway to design the official new &ldquo;microsite&rdquo; for Titanium &mdash; a subdomain of the main Axway website that would serve as the introduction and documentation hub for out Titanium product.",
+            "<div class='screenshot-previews'><a href='img/img-titanium-site-1.png' target='_blank'><img src='img/preview-titanium-site-1.png'></a><a href='img/img-titanium-site-2.png' target='_blank'><img src='img/preview-titanium-site-2.png'></a><a href='img/img-titanium-site-3.png' target='_blank'><img src='img/preview-titanium-site-3.png'></a><a href='img/img-titanium-site-4.png' target='_blank'><img src='img/preview-titanium-site-4.png'></a></div>",
             "This new design was drafted (<a href='https://bbag.github.io/titanium-site/' target='_blank'>demo here</a>) entirely by me, from pure HTML, CSS, and JS &mdash; no CMS or frameworks used. Components were designed for the final site to be built in VuePress."
         ],
         links: {
@@ -19,7 +20,7 @@ var myWork = {
             "GitHub": "https://github.com/bbag/titanium-site"
         },
         techStack: [
-            "html", "css", "sass", "js", "vue", "illustrator"
+            "html", "css", "sass", "js", "illustrator"
         ]
     },
     griffinapp: {
@@ -30,7 +31,7 @@ var myWork = {
         descriptionFull: [
             "During the summer of 2020, I worked with a team of developers at Axway to create an internal-facing mobile app to help employees gradually return to office work safely.",
             "The app's primary feature was the &ldquo;office scheduler&rdquo;&mdash;a calendar and scheduling tool where employees could easily schedule their in-office hours according to their teams' schedules and capacity limits set by HR.",
-            "<div class='mobile-screenshot-previews'><img src='img/preview-officescheduler-1.png'><img src='img/preview-officescheduler-2.png'><img src='img/preview-officescheduler-3.png'><img src='img/preview-officescheduler-4.png'></div>",
+            "<div class='screenshot-previews'><img src='img/preview-officescheduler-1.png'><img src='img/preview-officescheduler-2.png'><img src='img/preview-officescheduler-3.png'><img src='img/preview-officescheduler-4.png'></div>",
             "All screenshots and mock-ups were created exclusively by me, and designed within the scope of Axway's design system and branding guidelines."
         ],
         links: {
@@ -102,7 +103,8 @@ var myWork = {
         screenshot: "img/thumbnail-simplekitchen.png",
         descriptionBrief: "A UX/UI concept for a fictional recipe and cooking website.",
         descriptionFull: [
-            "A UX/UI concept for a fictional recipe and cooking website."
+            "A UX/UI concept for a fictional recipe and cooking website.",
+            "<div class='screenshot-previews'><a href='img/img-simplekitchen.png' target='_blank'><img src='img/preview-simplekitchen.png'></a></div>"
         ],
         links: {
             "View": "https://imgur.com/DO0Kzby"
