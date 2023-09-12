@@ -204,7 +204,7 @@ function workLinkSvgs(key) {
 /*  Initial console log, for all you code creepers ;)      */
 /*---------------------------------------------------------*/
 
-console.log("%cHey you, thanks for checking out my portfolio!\nIf you're looking to see what CMS or framework I used to make it, well... there isn't one. Everything here, from the graphics to the code, were all built by me from scratch. 🙂\nBut feel free to contact me at bill.baggerman@gmail.com if you ever want to know more!", "display: block; color: #5BAB38; border: 1px solid #5BAB38; padding: 8px; background: #E4F4DD");
+console.log("%cHey you, thanks for checking out my portfolio!\nIf you're looking to see what CMS or framework I used to make it, well... there isn't one. Everything here, from the graphics to the code, were all built by me from scratch. 🙂\nFeel free to contact me at billy.baggerman@gmail.com if you want to know more!", "display: block; color: #5BAB38; border: 1px solid #5BAB38; padding: 8px; background: #E4F4DD");
 
 /*---------------------------------------------------------*/
 /*  Screenshot carousel thing                              */
